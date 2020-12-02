@@ -39,6 +39,7 @@ public class Capsules {
 
     }
 
+
     public static void main(String[] args) {
 
         Capsules colorPipe = new Capsules();
@@ -55,6 +56,19 @@ public class Capsules {
 
         List colorList= colorPipe.getColors();
         System.out.println(colorList);
+
+        //Bónusz feladat 1.
+        //A Capsules osztály getColors() metódusával kérjük le a kapszulák színeit,
+        // majd az eredményt tároljuk le egy változóba. A letárolt változón hívjuk meg a clear() metódust.
+        // Majd ismét kérjük le a kapszulák színeit a getColors() metódussal ,
+        // és nézzük meg, hogy az előző clear() hívásnak volt-e hatása erre?
+
+        colorList.clear();
+        System.out.println(colorList);
+        List colorListAfter = colorPipe.getColors();
+        System.out.println(colorListAfter);
+
+        //Volt hatása, az attribútum lista törlődik
 
 
 
