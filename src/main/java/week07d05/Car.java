@@ -4,7 +4,4 @@ public class Car extends Vehicle {
 
     TransmissionType carTransmissionType = TransmissionType.AUTOMATIC;
 
-
-
-
 }
