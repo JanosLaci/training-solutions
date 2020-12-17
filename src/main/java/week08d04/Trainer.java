@@ -1,10 +1,10 @@
 package week08d04;
 
 public class Trainer {
-    CanMark canMarkTrainerAttribute;
+    private CanMark canMarkTrainerAttribute;
 
-    int giveMark(){
-        return giveMark();
+    public int giveMark(){
+        return canMarkTrainerAttribute.giveMark();
 
     }
 
