@@ -1,18 +1,8 @@
 package arrayofarrays;
 
+import java.util.Scanner ;
 
-//Hozz létre egy int[][] multiplicationTable(int size) metódust,
-// mely a paraméterként megadott méretű szorzótáblát adja vissza!
-// A szorzótábla alakja (csak 4x4 esetén):
-//1 2 3 4
-//2 4 6 8
-//3 6 9 12
-//4 8 12 16
-
-import java.util.Scanner;
-
-public class ArrayOfArraysMain {
-
+public class ArrayOfArrays2 {
     public int[][] multiplicationTable(int size){
         int[][] sizedMultiplicationTable = new int[size][size];
         for (int i = 0; i < size; i++){
@@ -44,13 +34,10 @@ public class ArrayOfArraysMain {
         Scanner scannerForArrayOfArrays = new Scanner(System.in);
         int mySize = scannerForArrayOfArrays.nextInt();
 
-        int [][] returnedArray = myArraysOfArray.multiplicationTable(mySize);
+        int[][] returnedArray = myArraysOfArray.multiplicationTable(mySize);
         myArraysOfArray.printArrayOfArrays(returnedArray);
-
-
-
-
-
-
     }
+
+
+
 }
