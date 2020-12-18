@@ -9,7 +9,7 @@ public class MathAlgorithmsMain {
         System.out.println("Számítsuk ki két pozitív egész szám legnagyobb közös osztóját!");
         System.out.println("Első szám?");
         int myFirstInputInt = scannerForMathAlgorithms.nextInt();
-        String enterHandler = scannerForMathAlgorithms.nextLine();
+        scannerForMathAlgorithms.nextLine();
 
         System.out.println("Második szám?");
 

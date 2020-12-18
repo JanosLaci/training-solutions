@@ -8,11 +8,10 @@ package week08d05;
 
 
 public class MathAlgorithms {
-    int firstInputInt, secondInputInt;
 
     public int greatestCommonDivisor(int firstInputInt, int secondInputInt){
         int foundMaxDivisor = 1;
-        for (int possibleDivisor = 1; possibleDivisor <= Math.min(firstInputInt, secondInputInt); possibleDivisor++){
+        for (int possibleDivisor = 2; possibleDivisor <= Math.min(firstInputInt, secondInputInt); possibleDivisor++){
 
             if (firstInputInt % possibleDivisor == 0 && secondInputInt % possibleDivisor == 0){
                 foundMaxDivisor = possibleDivisor;
