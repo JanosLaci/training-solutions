@@ -19,7 +19,7 @@ package stringbuilder;
 // amelynek visszatérési értéke true ha a paraméter String null vagy üres String!
 
 
-public class NameConcatenation {
+/*public class NameConcatenation {
 
     String familyName,  middleName,  givenName;
     Title title;
@@ -37,4 +37,4 @@ public class NameConcatenation {
     }
 
 
-}
+}*/
