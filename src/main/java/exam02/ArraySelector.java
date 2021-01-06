@@ -10,4 +10,28 @@ package exam02;
 public class ArraySelector {
 
 
+    public String selectEvens( int[] inputArray){
+        int lastIndex = 0;
+
+        if (inputArray.length == 0) {return "";};
+
+        StringBuilder textFromEvenItems = new StringBuilder();
+        textFromEvenItems.append('[');
+
+
+        for (int i=0; i<inputArray.length-1; i=i+2) {
+
+            textFromEvenItems.append( Integer.toString(inputArray[i]));
+            textFromEvenItems.append(", ");
+            lastIndex = i+1;
+
+        }
+
+        textFromEvenItems.append( Integer.toString(inputArray[lastIndex]));
+        textFromEvenItems.append(']');
+        return textFromEvenItems.toString();
+
+    }
+
+
 }
