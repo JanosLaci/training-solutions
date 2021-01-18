@@ -1,3 +1,4 @@
+/*
 package exam02.cv;
 
 //Egy önéletrajzot reprezentáló osztályt kell létrehozni, melyben van egy név,
@@ -16,3 +17,4 @@ public class Cv {
 
 
 }
+*/
