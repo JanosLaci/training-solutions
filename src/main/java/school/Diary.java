@@ -1,6 +1,5 @@
 package school;
 
-
 //Napló
 //Ebben a feladatban egy iskolai naplózó rendszert kell megvalósítanod.
 //Készíts a school csomagban egy Diary nevű osztályt benne egy newMark() metódussal,
