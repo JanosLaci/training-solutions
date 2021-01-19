@@ -1,4 +1,3 @@
-/*
 package week11d04;
 
 //Viczián István  9:29 AM
@@ -9,45 +8,56 @@ package week11d04;
 //Használd a Files.readString() metódust a fájl beolvasására! A FilesSum osztály sumNumbers() metódusába dolgozz!
 //(javítás: InputStream nem kell)
 
+//feltevések:
+//minden file egy integer számot tartalmaz, és mást nem
+//legalább egy file létezik
+//minden file a src/main/java/week11d04/numberTxtFiles/ könyvtárban található
+// -> Path from Repository Root alapesetben nem Windows-kompatibilis \-jellel adja át az elérési utat a vágólapra.
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 
 public class FilesSum {
 
-    public static void main(String[] args) {
-        String fileNameBeginning = "number";
+    static int sumNumbers() throws IOException {
+        int sumOfIntegers = 0;
+
+        for (int i = 0; i<100; i++){
+
+            //Path "Windows-kompatibilissé" alakítja az elérési utat
+            // \ escape karakter nehezen működne
+
+            Path txtFile = Path.of("src", "main", "java", "week11d04", "numberTxTFiles",
+                    "number" + ( i<10? "0" + i : i) + ".txt"  );
 
 
-        //lista a fileok nevéhez
-
-        List<String> fileNamesList = new ArrayList<>();
-
-        for (int i=0; i<100; i++) {
-
-            StringBuilder fileNameToAddToList = new StringBuilder();
-            fileNameToAddToList.append(fileNameBeginning);
-
-            if (i<10) fileNameToAddToList.append("0");
-
-            fileNameToAddToList.append(Integer.toString(i));
-
-
-            fileNamesList.add(fileNameToAddToList.toString());
+            if (Files.isRegularFile(txtFile)) {
+                int intInFile = Integer.parseInt(Files.readString(txtFile));
+                sumOfIntegers += intInFile;
+                System.out.println("Az "
+                        + txtFile.toString()
+                        + " állományban szereplő "
+                        + intInFile
+                        + " értékű egész szám a számítandó összeghez hozzáadva.");
+            }
 
         }
+        return sumOfIntegers;
+
+    }
+
+    public static void main(String[] args) throws IOException {
+        int sumOfNumbers = sumNumbers();
+
+        System.out.println(
+                "Az src/main/java/week11d04/numberTxtFiles/ könyvtár txt állományaiban található számok összege: "
+                + sumOfNumbers);
 
 
     }
 
 
-    sumNumbers(InputStream)
-
-
-
-
-
 
 }
-*/
