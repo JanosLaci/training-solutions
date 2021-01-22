@@ -31,5 +31,6 @@ public class WordContainingLinesCounterFromHtml {
                 + wordCounter + " sorban jelenik meg legalább egyszer az \"" + fileLocation + "\" állományban.");
         System.out.println("A \"koronavírus\" vagy a \"Koronavírus\" szó "
                 + wordCounterCaseInsensitive + " sorban jelenik meg legalább egyszer az \"" + fileLocation + "\" állományban.");
+        System.out.println("A szó toldalékkal is találatnak minősül, pl: a \"koronavírussal\" szó is találat.");
     }
 }
