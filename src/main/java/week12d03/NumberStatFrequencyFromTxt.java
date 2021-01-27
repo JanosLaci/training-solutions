@@ -36,7 +36,7 @@ public class NumberStatFrequencyFromTxt {
 
         List<String> linesListFromTxt = Files.readAllLines(inputFilePath);
         //ellenőrzés:
-        //System.out.println(linesListFromTxt);
+        System.out.println(linesListFromTxt);
         List<Integer> constructedIntegerList = new ArrayList<>();
 
         for (String lineString:

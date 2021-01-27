@@ -88,6 +88,35 @@ public class FilesSummarizeFromTxtExtended {
 
 
 
+String fileNameBeginning = "number";
+
+
+        //lista a fileok nevéhez
+
+        List<String> fileNamesList = new ArrayList<>();
+
+        for (int i=0; i<100; i++) {
+
+            StringBuilder fileNameToAddToList = new StringBuilder();
+            fileNameToAddToList.append(fileNameBeginning);
+
+            if (i<10) fileNameToAddToList.append("0");
+
+            fileNameToAddToList.append(Integer.toString(i));
+
+
+            fileNamesList.add(fileNameToAddToList.toString());
+
+        }
+
+
+    }
+
+
+    sumNumbers()
+
+
+
 
 
 */
