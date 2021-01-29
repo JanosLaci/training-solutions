@@ -10,15 +10,15 @@ package week13d05;
 import java.util.HashSet;
 import java.util.Set;
 
-public class letterCounterWithSet {
+public class LetterCounterWithSet {
 
     static int countDistinctEnglishLettersCaseInsensitive(String inputWord){
 
         //elvárunk legalább egy karaktert
         if (inputWord.length()<1) throw new IllegalArgumentException("Nincs karakter a megadott szóban!");
 
-        //int visszatérés miatt maximalizáljuk a szó hosszát
-        if (inputWord.length()>Integer.MAX_VALUE) throw new IllegalArgumentException("Fogd vissza magad!");
+        //int visszatérés miatt maximalizáljuk a szó hosszát, de int-nél nem lehet nagyobb
+        //if (inputWord.length()>Integer.MAX_VALUE) throw new IllegalArgumentException("Fogd vissza magad!");
 
         //A kis és nagybetűk közötti különbség nem számít
         String inputWordCaseInsensitive = inputWord.toLowerCase();
@@ -35,9 +35,14 @@ public class letterCounterWithSet {
             //System.out.println(inputWordCaseInsensitive.length());
             //System.out.println(characterTobecheched);
 
-            if (Character.isLetter(characterTobecheched)) characterSet.add(characterTobecheched);
+            //isLetter mégsem jó, magyar ábc-t is figyelembe veszi
+            //if (Character.isLetter(characterTobecheched)) characterSet.add(characterTobecheched);
+
+            if (characterTobecheched>='a' && characterTobecheched<='z') characterSet.add(characterTobecheched);
 
         }
+
+        //return (int) characterSet.stream().count(); helyett size, és akkor int sem kell
 
 
         return (int) characterSet.size();
@@ -45,9 +50,12 @@ public class letterCounterWithSet {
     }
 
     public static void main(String[] args) {
-        int charCount = countDistinctEnglishLettersCaseInsensitive(" w 78,tab   ord");
+        int charCount = countDistinctEnglishLettersCaseInsensitive(" wordáááá 78,tab   word");
         System.out.println(charCount);
+        System.out.println("  jl67 tab  tabé ".replaceAll("[\\W\\d]", "*"));
 
+//replaceAll("[\\W\\d\\s]","")
+//**jl***tab**tab**
 
     }
 
