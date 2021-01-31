@@ -5,7 +5,7 @@ public class ArraySelectorMain {
     public static void main(String[] args) {
 
 
-        int[] myArray = new int[]{1,2};
+        int[] myArray = new int[]{1,2,3,4,5};
 
         ArraySelector myArraySelector = new ArraySelector();
 

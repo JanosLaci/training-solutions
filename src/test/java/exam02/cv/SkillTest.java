@@ -1,8 +1,4 @@
-/*
-
 package exam02.cv;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,5 +12,4 @@ public class SkillTest {
         assertEquals("programming", skill.getName());
         assertEquals(3, skill.getLevel());
     }
-
-*/
+}
