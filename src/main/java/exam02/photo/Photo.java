@@ -29,17 +29,23 @@ public class Photo implements Qualified {
         this.quality = quality;
     }
 
+    public Photo(String name) {
+        this.name = name;
+        this.quality = Quality.NO_STAR;
+    }
+
     public String getName() {
         return name;
     }
 
     @Override
     public Quality getQuality() {
-        return null;
+        return this.quality;
     }
 
     @Override
     public void setQuality(Quality quality) {
+        this.quality = quality;
 
     }
 }
