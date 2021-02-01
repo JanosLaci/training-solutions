@@ -37,9 +37,13 @@ public class Indexer {
             //Ha már benne van a kulcs, lekérdezzük a hozzátartozó listát, hozzáadjuk a nevet,
                 // és felülírjuk az adott kulcsot a kibővített listával
             } else {
+                /*El lehet érni az összetett adatszerkezetben is a listát, és lehet rajta végezni műveletet,
+                az alábbi hosszadalmas és fölösleges:
                 List<String> nameListAlreadyInMap = mapOfFirstCharacters.get(firstChar);
                 nameListAlreadyInMap.add(name);
-                mapOfFirstCharacters.put(firstChar, nameListAlreadyInMap);
+                mapOfFirstCharacters.put(firstChar, nameListAlreadyInMap)*/
+                mapOfFirstCharacters.get(firstChar).add(name);
+
             }
         }
 

@@ -19,5 +19,13 @@ class IndexerTest {
         Map<Character,List<String>> myIndexerMap = new Indexer().index(Arrays.asList("Ádám", "Lujza", "Ábrahám"));
         assertEquals(myIndexerMap.toString(), "{Á=[Ádám, Ábrahám], L=[Lujza]}" );
 
+        //konzultáció után:
+        //assertEquals(myIndexerMap, Map.of("Á", List.of("Ádám", "Ábrahám"), "L", List.of("Lujza")) );
+        //De továbbra sem jó:
+        //org.opentest4j.AssertionFailedError: expected: java.util.HashMap@44f75083<{Á=[Ádám, Ábrahám], L=[Lujza]}>
+        // but was: java.util.ImmutableCollections$MapN@2698dc7<{Á=[Ádám, Ábrahám], L=[Lujza]}>
+        //Expected :{Á=[Ádám, Ábrahám], L=[Lujza]}
+        //Actual   :{Á=[Ádám, Ábrahám], L=[Lujza]}
+
     }
 }
