@@ -56,8 +56,8 @@ public class PhotoCollectionTest {
     public void testNotFound() {
         PhotoCollection photoCollection = new PhotoCollection();
         photoCollection.addPhoto("a.jpg", "b.jpg", "c.jpg");
-        /*assertThrows(PhotoNotFoundException.class,
-                () -> photoCollection.starPhoto("d.jpg", Quality.ONE_STAR));*/
+        assertThrows(PhotoNotFoundException.class,
+                () -> photoCollection.starPhoto("d.jpg", Quality.ONE_STAR));
     }
 
     @Test

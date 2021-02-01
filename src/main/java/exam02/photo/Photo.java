@@ -39,6 +39,7 @@ public class Photo implements Qualified {
     }
 
     @Override
+    //this itt szükségtelen
     public Quality getQuality() {
         return this.quality;
     }

@@ -17,16 +17,57 @@ public class PhotoCollection {
     }
 
 
-    public void starPhoto(String inputName, Quality inputQuality) {
+    /*public void starPhoto(String inputName, Quality inputQuality) {
         boolean foundAtLeastOnePhoto = false;
         for (Photo photo: photos) {
             if (photo.getName().equals(inputName)){
                 photo.setQuality(inputQuality);
                 foundAtLeastOnePhoto = true;
+                return;
             }
             if (foundAtLeastOnePhoto = false) {
                 throw new PhotoNotFoundException("No such photo found.");
-            } } }
+            } } }*/
+
+    //Csak így működik:
+    //https://e-learning.training360.com/courses/take/java-backend-kepzesi-anyagok/lessons/19768624-01-11-senior-csoport-junior-java-backend-fejleszto-konzultacio-2021-01-04-29-10-00-11-30-3
+    public void starPhoto(String inputName, Quality inputQuality) {
+        for (Photo photo: photos) {
+            if (photo.getName().equals(inputName)){
+                photo.setQuality(inputQuality);
+                return;
+            }
+
+        }
+        throw new PhotoNotFoundException("No such photo found.");
+    }
+
+
+/*kérdés: így sem működött
+    public void starPhoto(String inputName, Quality inputQuality) {
+        for (Photo photo: photos) {
+            if (photo.getName().equals(inputName)){
+                photo.setQuality(inputQuality);
+                return;
+            }
+            else {
+                throw new PhotoNotFoundException("No such photo found.");
+            }
+             }
+
+    }*/
+
+
+    //kérdés: Nem működött:
+    //public void starPhoto(String inputName, Quality inputQuality) {
+    //        for (Photo photo: photos) {
+    //            if (photo.getName().equals(inputName)){
+    //                photo.setQuality(inputQuality);
+    //                return;
+    //            }
+    //
+    //        throw new PhotoNotFoundException("No such photo found.");}
+    //    }
 
 
     public int numberOfStars() {
