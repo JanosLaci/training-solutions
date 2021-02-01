@@ -19,6 +19,27 @@ package exam02.photo;
 
 //Megj.: a file elérési útvonala: src/main/resources/exam02/papers.csv
 
-public class Photo {
+public class Photo implements Qualified {
 
+    private String name;
+    private Quality quality;
+
+    public Photo(String name, Quality quality) {
+        this.name = name;
+        this.quality = quality;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public Quality getQuality() {
+        return null;
+    }
+
+    @Override
+    public void setQuality(Quality quality) {
+
+    }
 }
