@@ -8,6 +8,7 @@ package timesheet;
 // A projekteket és alkalmazottak neveit egy-egy fájlból kell beolvasni a konstruktorban,
 // (alkalmazottnál vezeték-, keresztnevet külön-külön).
 //Az addTimeSheetItem metódusban lehet új elemet felvenni.
+//https://e-learning.training360.com/courses/take/java-backend-kepzesi-anyagok/lessons/20463212-01-29-senior-csoport-junior-java-backend-fejleszto-konzultacio-2021-01-04-29-10-00-11-30
 
 //Megj.: a resources file-ok elérési útvonala:
 //src/main/resources/timesheet/employees.txt

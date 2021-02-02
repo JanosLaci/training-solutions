@@ -22,10 +22,10 @@ package week14d02SeniorPurchaseStatistics;
 //Oldd meg az alábbi feladatokat:
 //1. Készíts egy metódust, ami visszaadja vásárlási azonosító alapján az adott vásárlás összértékét.
 //2. Készíts egy metódust, ami egy vásárló alapján visszaadja, hogy az adott vásárló mennyit pénzt költött eddig összesen a webáruházban.
-//3. Készíts egy metódus, ami a vásárlónak ABC sorrendbe rendezi egy vásárláson belül a termékeket, vásárlás azonosító alapján.
+//3. Készíts egy metódust, ami a vásárlónak ABC sorrendbe rendezi egy vásárláson belül a termékeket, vásárlás azonosító alapján.
 // (Bónusz: megoldhatod úgy, hogy vagy név vagy ár alapján rendezze annak megfelelően, hogy hogyan hívjuk a metódust.)
 // Fontos, hogy ne rendezzük át az eredeti listát egy másolatot rendezzünk és azt adjuk vissza.
-//4. Készíts egy metódust, ami visszaadja, adott termék neve alapján, hogy összesen hányat rendeletek belőle a fájl alapján.
+//4. Készíts egy metódust, ami visszaadja, adott termék neve alapján, hogy összesen hányat rendeltek belőle a fájl alapján.
 //5. Készíts statisztikát a rendelt termékekből. Tárold el a termékeket és azt, hogy összesen hány darabot rendeltek belőle.
 
 public class OrdersStatistics {
