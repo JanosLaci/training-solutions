@@ -24,7 +24,7 @@ public class HachikoLineCounter {
     Map<String, Integer> countWords(Path path, String... inputWordsToFindInLines){
 
         //Feltételezés: legalább egy szót meg kell adni
-        if (inputWordsToFindInLines.length<1) throw new IllegalStateException("No input words found.");
+        if (inputWordsToFindInLines.length<1) throw new IllegalArgumentException("No input words found.");
 
         //Treemap választása, hogy a szavak rendezettek legyenek a kulcsban
         Map<String, Integer> wordsToLineCountsMap = new TreeMap<>();
@@ -47,7 +47,7 @@ public class HachikoLineCounter {
                 }
             }
         } catch (IOException ioException) {
-            throw new IllegalStateException("Cannot red the file.", ioException);
+            throw new IllegalStateException("Cannot read the file.", ioException);
         }
 
         return wordsToLineCountsMap;
