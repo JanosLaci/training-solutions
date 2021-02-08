@@ -14,7 +14,8 @@ class LambdaFirstTry {
 
         //Konvertáló<String , Boolean> stringToBooleanKonvertáló = (bármilyenSzöveg) -> {return Boolean.parseBoolean(bármilyenSzöveg);};
 
-        Konvertáló<String , Boolean> stringToBooleanKonvertáló = bármilyenSzöveg -> Boolean.parseBoolean(bármilyenSzöveg);
+        Konvertáló<String , Boolean> stringToBooleanKonvertáló =
+                bármilyenSzövegDeAzEredménynekMárBooleannakKellLennie -> Boolean.parseBoolean(bármilyenSzövegDeAzEredménynekMárBooleannakKellLennie);
 
         Konvertáló<String, Boolean> str2BooleanKonvertalo = Boolean::parseBoolean;
 
