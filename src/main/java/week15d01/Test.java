@@ -1,4 +1,4 @@
-package week16d01;
+package week15d01;
 //foo() mainben nem használható így nem statikusan
 //https://www.indiabix.com/online-test/java-programming-test/61
 

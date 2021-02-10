@@ -1,4 +1,4 @@
-package week16d01;
+package week15d01;
 
 //Kristóf Bárczay  7:40 AM
 //Mai Senior feladat

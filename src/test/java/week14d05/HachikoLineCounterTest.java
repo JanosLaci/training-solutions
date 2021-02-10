@@ -1,4 +1,4 @@
-package week15d05;
+package week14d05;
 
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +16,7 @@ class HachikoLineCounterTest {
         assertEquals(3635,
                 new HachikoLineCounter().
                         countWords(Path.
-                                of("src/main/resources/week15d05/hachiko.srt"),
+                                of("src/main/resources/week14d05/hachiko.srt"),
                                 "").get(""));
     }
 
@@ -27,7 +27,7 @@ class HachikoLineCounterTest {
 
                     new HachikoLineCounter().
                     countWords(Path.
-                                    of("src/main/resources/week15d05/hachiko.srt"),
+                                    of("src/main/resources/week14d05/hachiko.srt"),
                             ), );
 
         }*/

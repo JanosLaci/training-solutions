@@ -1,4 +1,4 @@
-package week16d03;
+package week15d02;
 
 import java.lang.Math;
 import java.util.Random;

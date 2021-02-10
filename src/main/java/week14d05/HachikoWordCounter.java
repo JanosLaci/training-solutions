@@ -1,4 +1,4 @@
-package week15d05;
+package week14d05;
 
 
 //Viczián István  9:00 AM
@@ -7,12 +7,11 @@ package week15d05;
 //használatával számold ki, hogy hányszor hangzik el a kutya neve a filmben!
 //Segítség: a Files.lines() adja vissza a fájl sorait streamben.
 
-//Megj.: A file elérési útja : src/main/resources/week15d05/hachiko.srt
+//Megj.: A file elérési útja : src/main/resources/week14d05/hachiko.srt
 //Konzultáció:https://e-learning.training360.com/courses/take/java-backend-kepzesi-anyagok/
 //lessons/20626886-02-05-senior-csoport-junior-java-backend-fejleszto-konzultacio-2021-01-04-29-10-00-11-30-23
 
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
@@ -82,7 +81,7 @@ public class HachikoWordCounter {
 
     public static void main(String[] args) {
 
-        Path path = Path.of("src/main/resources/week15d05/hachiko.srt");
+        Path path = Path.of("src/main/resources/week14d05/hachiko.srt");
         long myCOunt = new HachikoWordCounter().wordCounterStreamBased(path, "Hachi");
         System.out.println(myCOunt);
 

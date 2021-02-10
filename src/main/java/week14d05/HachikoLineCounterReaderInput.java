@@ -1,4 +1,4 @@
-package week15d05;
+package week14d05;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -42,7 +42,7 @@ public class HachikoLineCounterReaderInput {
 
     public static void main(String[] args) throws IOException {
 
-        Reader reader = Files.newBufferedReader(Path.of("src/main/resources/week15d05/hachiko.srt"));
+        Reader reader = Files.newBufferedReader(Path.of("src/main/resources/week14d05/hachiko.srt"));
 
         HachikoLineCounterReaderInput hachikoLineCounterReaderInput = new HachikoLineCounterReaderInput();
         Map<String , Integer> mapToPrint =

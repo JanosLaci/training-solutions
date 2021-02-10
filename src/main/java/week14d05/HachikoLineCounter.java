@@ -1,4 +1,4 @@
-package week15d05;
+package week14d05;
 
 //Viczián István  9:00 AM
 //## Junior/mid-level
@@ -8,7 +8,7 @@ package week15d05;
 //szövegben. Legyenek mondjuk a beadott szavak: "Hachiko", "haza",
 //"pályaudvar", "jó"
 
-//Megj.: A file elérési útja : src/main/resources/week15d05/hachiko.srt
+//Megj.: A file elérési útja : src/main/resources/week14d05/hachiko.srt
 
 import java.io.BufferedReader;
 import java.io.IOException;

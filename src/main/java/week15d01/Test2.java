@@ -1,4 +1,4 @@
-package week16d01;
+package week15d01;
 
 
     public class Test2

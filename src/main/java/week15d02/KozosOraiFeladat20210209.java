@@ -1,4 +1,4 @@
-package week16d03;
+package week15d02;
 
 //Adott egy vetélkedő kérdésbankja egy fájlban. A fálban az egy kérdéshez tartozó adatok két sorban helyezkednek el.
 // Első sorban a kérdés, a második sorban

@@ -1,5 +1,5 @@
 /*
-package week16d01;
+package week15d01;
 
 
 //Kristóf Bárczay  11:42 AM
