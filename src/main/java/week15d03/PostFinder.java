@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 
 class PostFinder {
@@ -21,12 +22,15 @@ class PostFinder {
 
    public List<Post> findPostsFor(String user){
 
+       //NullPointerException -t dob, ha null a user:
+       Objects.requireNonNull(user);
+
        List<Post> filteredPostList = new ArrayList<>();
        for (Post post: postList) {
            if (post.getOwner().equals(user)
-                   & post.getPublishedAt().isBefore(LocalDate.now())
-                   & (!post.getContent().isBlank())
-                   & (!post.getTitle().isBlank()) ) {
+                   && post.getPublishedAt().isBefore(LocalDate.now())
+                   && (!post.getContent().isBlank())
+                   && (!post.getTitle().isBlank()) ) {
                filteredPostList.add(post);
            }
        }
@@ -38,6 +42,9 @@ class PostFinder {
 
     public static void main(String[] args) {
         List<Post> filteredPost = new PostFinder().findPostsFor("Józsi");
+        System.out.println(filteredPost.toString());
+
+        List<Post> filteredPostNull = new PostFinder().findPostsFor(null);
         System.out.println(filteredPost.toString());
 
 
