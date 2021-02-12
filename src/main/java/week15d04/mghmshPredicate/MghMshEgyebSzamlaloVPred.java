@@ -21,12 +21,20 @@ class MghMshEgyebSzamlaloVPred {
 
    static Stream<String> olvasdBeKarakterStreambeSpaceNelkul(Path path) {
 
-       try { return Files.lines(path)
-               .flatMap(Pattern.compile("")::splitAsStream)
-               .filter(isItToBeFiltered.negate()::test); }
+      //kiírva:
+       // (Pattern nélkül, ""-n meghívva nem működik)
+          /* Pattern pattern = Pattern.compile("");
+           return Files.lines(path)
+                    .flatMap(input -> pattern.splitAsStream(input))
+                    .filter(isItToBeFiltered.negate()::test); */
+
+      try { return Files.lines(path)
+            .flatMap(Pattern.compile("")::splitAsStream)
+            .filter(isItToBeFiltered.negate()::test); }
 
         catch (IOException ioException) { throw new IllegalStateException("Cannot read the file.", ioException); }
-    }
+}
+
 
     public static void main(String[] args) throws IOException {
 
