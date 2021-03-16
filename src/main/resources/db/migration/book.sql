@@ -1,0 +1,1 @@
+create table books(id bigint auto_increment, author varchar(255), constraint pk_books primary key(id));

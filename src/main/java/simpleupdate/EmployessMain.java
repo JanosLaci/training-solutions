@@ -1,12 +1,22 @@
 package simpleupdate;
 
+//SQL: create schema if not exists employees default character set utf8 collate utf8_hungarian_ci;
+//
+//create user 'employees'@'localhost' identified by 'employees';
+//grant all on employees.* to 'employees'@'localhost';
+
+
 import org.mariadb.jdbc.MariaDbDataSource;
 
 import java.sql.*;
 
+
 public class EmployessMain {
 
     public static void main(String[] args) {
+
+
+
         MariaDbDataSource dataSource;
         try {
             dataSource = new MariaDbDataSource();
@@ -20,8 +30,6 @@ public class EmployessMain {
 
 
 
-       /* insert
-
        try (
                 Connection conn = dataSource.getConnection();
                 PreparedStatement stmt =
@@ -31,7 +39,7 @@ public class EmployessMain {
         }
         catch (SQLException se) {
             throw new IllegalStateException("Cannot execute the insertions", se);
-        }*/
+        }
 
 
 
